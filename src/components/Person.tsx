@@ -1,9 +1,4 @@
-type PersonPros = {
-  name: {
-    firstName: string;
-    lastName: string;
-  };
-};
+import { PersonPros } from "./types";
 
 export default function Person(props: PersonPros) {
   return (
