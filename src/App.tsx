@@ -16,6 +16,7 @@ import { Input } from "./components/Input";
 import Oscar from "./components/Oscar";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
+import { Text } from "./components/polymorphic/Text";
 import { MutableRef } from "./components/ref/MutableRef";
 import { RandomNumber } from "./components/restriction/RandomNumber";
 import Status from "./components/Status";
@@ -91,6 +92,16 @@ function App() {
       <Toast position="center" />
 
       <CustomButton variant="secondary">Primary button</CustomButton>
+
+      <Text as="h1" size="lg">
+        AS h1
+      </Text>
+      <Text as="label" size="lg">
+        Lable
+      </Text>
+      <Text as="p" size="lg">
+        AS paragraph
+      </Text>
     </div>
   );
 }
