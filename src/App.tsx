@@ -8,6 +8,7 @@ import { Box } from "./components/context/Box";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import { User } from "./components/context/User";
 import { UserContextProvider } from "./components/context/UserContext";
+import { List } from "./components/generics/List";
 import Greet from "./components/Greet";
 import Heading from "./components/Heading";
 import { Input } from "./components/Input";
@@ -66,6 +67,11 @@ function App() {
       <Counter message="The Count value is" />
 
       <Private isLoggedIn={true} component={Profile} />
+
+      <List
+        items={["Batman", "Superman", "Wonder Woman"]}
+        onClick={(item) => console.log(item)}
+      />
     </div>
   );
 }
