@@ -16,7 +16,9 @@ import Oscar from "./components/Oscar";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
 import { MutableRef } from "./components/ref/MutableRef";
+import { RandomNumber } from "./components/restriction/RandomNumber";
 import Status from "./components/Status";
+import { Toast } from "./components/templateliterals/Toast";
 
 function App() {
   const personName = {
@@ -72,6 +74,20 @@ function App() {
         items={["Batman", "Superman", "Wonder Woman"]}
         onClick={(item) => console.log(item)}
       />
+
+      <List items={[1, 2, 3, 4]} onClick={(item) => console.log(item)} />
+
+      {/* <List
+        items={[
+          { firstName: "John", lastName: "Bruche" },
+          { firstName: "John", lastName: "Bruche" },
+          { firstName: "John", lastName: "Bruche" },
+        ]}
+        onClick={(item) => console.log(item)}
+      /> */}
+
+      <RandomNumber value={10} isPositive />
+      <Toast position="center" />
     </div>
   );
 }
