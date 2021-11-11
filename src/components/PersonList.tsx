@@ -1,9 +1,20 @@
-export default function PersonList() {
+type PersonListProps = {
+  names: {
+    firstName: string;
+    lastName: string;
+  }[];
+};
+
+export default function PersonList(props: PersonListProps) {
   return (
     <div>
-      <h2>ABC</h2>
-      <h2>WER</h2>
-      <h2>XYZ</h2>
+      {props.names.map((name, i) => {
+        return (
+          <h2 key={i}>
+            {name.firstName} {name.lastName}
+          </h2>
+        );
+      })}
     </div>
   );
 }
