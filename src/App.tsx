@@ -11,6 +11,7 @@ import { UserContextProvider } from "./components/context/UserContext";
 import { List } from "./components/generics/List";
 import Greet from "./components/Greet";
 import Heading from "./components/Heading";
+import { CustomButton } from "./components/html/Button";
 import { Input } from "./components/Input";
 import Oscar from "./components/Oscar";
 import Person from "./components/Person";
@@ -88,6 +89,8 @@ function App() {
 
       <RandomNumber value={10} isPositive />
       <Toast position="center" />
+
+      <CustomButton variant="secondary">Primary button</CustomButton>
     </div>
   );
 }
