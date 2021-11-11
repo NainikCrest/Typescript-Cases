@@ -1,4 +1,6 @@
 import "./App.css";
+import { Private } from "./components/auth/Private";
+import { Profile } from "./components/auth/Profile";
 import { Button } from "./components/Button";
 import Counter from "./components/class/Counter";
 import { Container } from "./components/Container";
@@ -62,6 +64,8 @@ function App() {
       <MutableRef />
 
       <Counter message="The Count value is" />
+
+      <Private isLoggedIn={true} component={Profile} />
     </div>
   );
 }
